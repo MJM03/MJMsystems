@@ -1,15 +1,15 @@
-# MJM Systems Web v4.0.1
+# MJM Systems Web v4.0.2
 
-Corrección principal:
-- Se eliminó el conflicto entre las etiquetas de cada servicio y el footer global.
-- Ya no aparecen bloques negros gigantes debajo de KPI, Reportes, BI, IA, etc.
-- Las etiquetas ahora son chips independientes y responsivos.
-- Se corrigieron desbordamientos de texto en Safari iOS.
-- Se ajustó la tarjeta de IA para pantallas pequeñas.
-- Se añadió compatibilidad defensiva por si Safari conserva HTML anterior en caché.
+Cambios:
+- Se eliminó completamente la tarjeta “IA dentro de procesos reales”.
+- Se reconstruyó la mini interfaz de Dashboard y analítica.
+- El gráfico ahora tiene una altura estable y no se corta en Safari iOS.
+- Los KPI quedan contenidos dentro del panel.
+- Se agregó cuadrícula, leyenda y periodo del reporte.
+- Se optimizó la tarjeta para iPhone y pantallas pequeñas.
 
-Datos configurados:
-- Correo: MJMsystems.c@gmail.com
-- WhatsApp: +51 936 702 029
+Datos:
+- MJMsystems.c@gmail.com
+- +51 936 702 029
 
-Reemplaza todos los archivos de la raíz del repositorio.
+Reemplaza todos los archivos anteriores en la raíz del repositorio.

@@ -853,3 +853,235 @@ img,svg{max-width:100%;height:auto}
     grid-template-columns: 34px minmax(0,1fr);
   }
 }
+
+
+/* =========================================================
+   MJM Systems v4.0.2 — Dashboard estable en Safari iOS
+   ========================================================= */
+
+.demo-dashboard {
+  height: 235px;
+  padding: 14px;
+  overflow: hidden;
+}
+
+.dashboard-shell {
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  display: grid;
+  grid-template-rows: auto auto minmax(76px, 1fr) auto;
+  gap: 10px;
+  padding: 13px;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 14px;
+  background: linear-gradient(145deg,#0b192c,#132b49);
+  color: #fff;
+  overflow: hidden;
+}
+
+.dashboard-header {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.dashboard-header > div {
+  min-width: 0;
+}
+
+.dashboard-header small,
+.dashboard-header b {
+  display: block;
+}
+
+.dashboard-header small {
+  color: #7086a3;
+  font-size: 6px;
+  line-height: 1.2;
+}
+
+.dashboard-header b {
+  margin-top: 2px;
+  color: #fff;
+  font-size: 10px;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dashboard-header > span {
+  flex: 0 0 auto;
+  padding: 5px 8px;
+  border-radius: 999px;
+  background: rgba(79,220,160,.12);
+  color: #55dca2;
+  font-size: 6px;
+  font-weight: 800;
+}
+
+.dashboard-kpis {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 7px;
+}
+
+.dashboard-kpis > div {
+  min-width: 0;
+  padding: 8px;
+  border-radius: 9px;
+  background: rgba(26,54,91,.78);
+}
+
+.dashboard-kpis small,
+.dashboard-kpis strong {
+  display: block;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dashboard-kpis small {
+  color: #7288a6;
+  font-size: 6px;
+}
+
+.dashboard-kpis strong {
+  margin-top: 2px;
+  color: #fff;
+  font-size: 10px;
+  line-height: 1.2;
+}
+
+.dashboard-chart {
+  position: relative;
+  min-height: 0;
+  overflow: hidden;
+  border-radius: 10px;
+  background: rgba(7,19,34,.52);
+}
+
+.dashboard-chart svg,
+.chart-grid {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.chart-grid {
+  background-image:
+    linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);
+  background-size: 100% 25%, 25% 100%;
+}
+
+.dashboard-area {
+  fill: url(#dashboardArea);
+}
+
+.dashboard-line {
+  fill: none;
+  stroke: #5b91ff;
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 800;
+  stroke-dashoffset: 800;
+  transition: stroke-dashoffset 1.4s ease;
+}
+
+.demo-card.visible .dashboard-line {
+  stroke-dashoffset: 0;
+}
+
+.dashboard-footer {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #8194ad;
+  font-size: 6px;
+}
+
+.dashboard-footer span {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+}
+
+.dashboard-footer small {
+  margin-left: auto;
+  color: #657b98;
+  white-space: nowrap;
+}
+
+.dashboard-footer i {
+  width: 7px;
+  height: 7px;
+  border-radius: 3px;
+}
+
+.sales-dot { background: #5b91ff; }
+.ops-dot { background: #3569c6; }
+
+/* Remove any leftover IA demo styles from layout. */
+.demo-ai,
+.demo-card:has(.demo-ai) {
+  display: none !important;
+}
+
+@media (max-width: 760px) {
+  .demo-dashboard {
+    height: 245px !important;
+    padding: 12px;
+  }
+
+  .dashboard-shell {
+    grid-template-rows: auto auto minmax(92px,1fr) auto;
+    padding: 12px;
+    gap: 9px;
+  }
+
+  .dashboard-header b {
+    font-size: 11px;
+  }
+
+  .dashboard-kpis strong {
+    font-size: 11px;
+  }
+
+  .dashboard-footer {
+    gap: 9px;
+  }
+}
+
+@media (max-width: 390px) {
+  .demo-dashboard {
+    height: 230px !important;
+    padding: 10px;
+  }
+
+  .dashboard-shell {
+    grid-template-rows: auto auto minmax(80px,1fr) auto;
+    padding: 10px;
+  }
+
+  .dashboard-kpis {
+    gap: 5px;
+  }
+
+  .dashboard-kpis > div {
+    padding: 7px 6px;
+  }
+
+  .dashboard-footer small {
+    display: none;
+  }
+}
