@@ -106,3 +106,73 @@ img,svg{max-width:100%;height:auto}
   .image-screen{aspect-ratio:16/10}
   .projects h3{margin-top:8px}
 }
+
+
+/* v3.1.1 — Optimización de casos de uso para iPhone */
+@media (max-width: 760px) {
+  .casebox > div:last-child {
+    min-height: 0;
+    display: block;
+    padding: 28px 22px;
+  }
+
+  .casebox > div:last-child > div:first-child {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .casebox .preview {
+    display: none !important;
+  }
+
+  .casebox h3 {
+    font-size: clamp(30px, 9vw, 42px);
+    line-height: 1.12;
+    margin: 18px 0;
+    overflow-wrap: anywhere;
+  }
+
+  .casebox p {
+    margin-bottom: 22px;
+  }
+
+  .caseSteps {
+    display: grid;
+    gap: 10px;
+  }
+
+  .caseSteps div {
+    margin: 0;
+    min-height: 66px;
+    padding: 12px 14px;
+    align-items: center;
+  }
+
+  .caseSteps span {
+    flex: 0 0 42px;
+    width: 42px;
+    height: 42px;
+    font-size: 18px;
+  }
+
+  .caseSteps b {
+    min-width: 0;
+    font-size: 15px;
+    line-height: 1.3;
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (max-width: 390px) {
+  .casebox > div:last-child {
+    padding: 24px 18px;
+  }
+
+  .casebox h3 {
+    font-size: 30px;
+  }
+
+  .caseSteps b {
+    font-size: 14px;
+  }
+}
