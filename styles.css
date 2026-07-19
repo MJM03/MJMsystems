@@ -678,3 +678,178 @@ img,svg{max-width:100%;height:auto}
   .node-api,.node-doc{right:12px;}
   .line-a,.line-c{left:96px;right:96px;}
 }
+
+
+/* =========================================================
+   MJM Systems v4.0.1 — fix nested footer collision and overflow
+   ========================================================= */
+
+/* The service cards previously used <footer>, which inherited the
+   global website footer background and padding. Tags now use this class. */
+.product-demos .demo-tags,
+.cards .demo-tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 7px;
+  margin-top: 16px;
+  padding: 0;
+  background: transparent;
+  color: inherit;
+}
+
+.product-demos .demo-tags b,
+.cards .demo-tags b {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 30px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #edf3ff;
+  color: #2855a6;
+  font-size: 10px;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+/* Defensive reset in case an old cached HTML still contains article footer. */
+.product-demos article > footer,
+.cards article > footer {
+  display: flex !important;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 16px 0 0 !important;
+  padding: 0 !important;
+  min-height: 0 !important;
+  background: transparent !important;
+  color: inherit !important;
+}
+
+.product-demos article > footer b,
+.cards article > footer b {
+  display: inline-flex;
+  min-height: 30px;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #edf3ff;
+  color: #2855a6;
+  font-size: 10px;
+  line-height: 1;
+}
+
+/* Prevent content from becoming wider than its card in Safari. */
+.product-demos .demo-card,
+.product-demos .demo-card > *,
+.product-demos .visual,
+.product-demos .visual * {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.product-demos .demo-card > h3,
+.product-demos .demo-card > p {
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+.demo-ai {
+  overflow: hidden;
+}
+
+.ai-header {
+  min-width: 0;
+}
+
+.ai-header > div:nth-child(2) {
+  min-width: 0;
+}
+
+.ai-header small,
+.ai-header b {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ai-message p,
+.ai-answer p {
+  overflow-wrap: anywhere;
+}
+
+.ai-answer > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.ai-answer button {
+  margin: 8px 0 0;
+  max-width: 100%;
+}
+
+/* Analytics never creates a black extension below its demo. */
+.demo-analytics {
+  overflow: hidden;
+}
+
+.analytics-legend {
+  flex-wrap: wrap;
+}
+
+/* Mobile adjustments */
+@media (max-width: 760px) {
+  .product-demos .demo-card {
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  .product-demos .visual {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .product-demos .demo-tags {
+    margin-top: 14px;
+  }
+
+  .product-demos .demo-tags b {
+    min-height: 31px;
+    padding: 7px 11px;
+    font-size: 10px;
+  }
+
+  .demo-ai {
+    padding: 13px;
+  }
+
+  .ai-header {
+    grid-template-columns: 34px minmax(0,1fr) auto;
+  }
+
+  .ai-answer button {
+    flex: 0 1 auto;
+    padding-inline: 8px;
+  }
+}
+
+@media (max-width: 390px) {
+  .product-demos .demo-tags {
+    gap: 6px;
+  }
+
+  .product-demos .demo-tags b {
+    padding-inline: 9px;
+    font-size: 9px;
+  }
+
+  .ai-header > span {
+    display: none;
+  }
+
+  .ai-header {
+    grid-template-columns: 34px minmax(0,1fr);
+  }
+}

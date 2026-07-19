@@ -1,19 +1,15 @@
-# MJM Systems Web v4.0.0
+# MJM Systems Web v4.0.1
 
-Actualización principal:
-- Se reconstruyó completamente la sección “Qué podemos construir”.
-- Cada servicio contiene una mini interfaz de software real.
-- ERP con KPI y gráfico animado.
-- App móvil con escáner de inventario.
-- POS de escritorio con productos y ticket.
-- Automatización con flujo conectado.
-- Dashboard con indicadores y gráfico animado.
-- Asistente IA con respuesta escrita progresivamente.
-- Optimización mobile-first para iPhone y Safari.
-- No depende de imágenes externas para estas demostraciones.
+Corrección principal:
+- Se eliminó el conflicto entre las etiquetas de cada servicio y el footer global.
+- Ya no aparecen bloques negros gigantes debajo de KPI, Reportes, BI, IA, etc.
+- Las etiquetas ahora son chips independientes y responsivos.
+- Se corrigieron desbordamientos de texto en Safari iOS.
+- Se ajustó la tarjeta de IA para pantallas pequeñas.
+- Se añadió compatibilidad defensiva por si Safari conserva HTML anterior en caché.
 
 Datos configurados:
 - Correo: MJMsystems.c@gmail.com
 - WhatsApp: +51 936 702 029
 
-Reemplaza todos los archivos anteriores en la raíz del repositorio.
+Reemplaza todos los archivos de la raíz del repositorio.
