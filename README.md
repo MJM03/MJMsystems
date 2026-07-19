@@ -1,11 +1,11 @@
-# MJM Systems Web v3.0.0
+# MJM Systems Web v3.1.0
 
-Versión corregida para iPhone y Safari.
+Actualización:
+- Portafolio con imágenes visuales de QuoteOS, AGP ERP, Inventory Control, OpsCenter y Nuestro Espacio.
+- Imágenes optimizadas para escritorio y Safari iOS.
+- Icono oficial de WhatsApp en SVG.
+- Mejores sombras, recorte y escalado en tarjetas.
+- Correo: MJMsystems.c@gmail.com
+- WhatsApp: +51 936 702 029
 
-Cambios principales:
-- Se eliminó la colisión CSS entre la sección de diagnóstico y la tarjeta QuoteOS.
-- Las etiquetas dejaron de usar la etiqueta footer, evitando fondos y espacios gigantes.
-- Portafolio, tarjetas, mockups y diagnóstico recalibrados para móvil.
-- Contacto: MJMsystems.c@gmail.com / +51 936 702 029.
-
-Sube todos los archivos a la raíz de GitHub Pages y reemplaza los anteriores.
+Sube todos los archivos directamente a la raíz del repositorio y reemplaza los anteriores.

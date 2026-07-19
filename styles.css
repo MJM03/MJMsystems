@@ -59,3 +59,50 @@ img,svg{max-width:100%;height:auto}
   .widget span{min-height:56px}
   .wa{width:52px;height:52px;border-radius:16px}
 }
+
+/* v3.1.0 — portfolio with real visual previews */
+.image-screen{
+  height:auto!important;
+  aspect-ratio:16/10;
+  margin:0 0 17px;
+  background:#081421;
+  overflow:hidden;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.image-screen img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  transition:transform .45s ease,filter .45s ease;
+}
+.projects article:hover .image-screen img{
+  transform:scale(1.025);
+  filter:brightness(1.05);
+}
+.projects article{
+  box-shadow:0 14px 34px rgba(0,0,0,.14);
+}
+.wa{
+  width:58px;height:58px;
+  border-radius:50%;
+  background:#25D366;
+  box-shadow:0 12px 30px rgba(37,211,102,.34);
+  border:1px solid rgba(255,255,255,.28);
+  transition:transform .2s ease,box-shadow .2s ease;
+}
+.wa:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 17px 38px rgba(37,211,102,.42)}
+.wa svg{width:31px;height:31px;fill:#fff;display:block}
+@media(max-width:760px){
+  .projects article,.projects .large{min-width:0;width:100%;overflow:hidden}
+  .image-screen{aspect-ratio:16/10;height:auto!important}
+  .image-screen img{object-fit:cover}
+  .wa{right:18px;bottom:calc(18px + env(safe-area-inset-bottom));width:56px;height:56px}
+}
+@media(max-width:520px){
+  .portfolio .projects{gap:18px}
+  .projects article{border-radius:18px}
+  .image-screen{aspect-ratio:16/10}
+  .projects h3{margin-top:8px}
+}
