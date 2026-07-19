@@ -1,18 +1,13 @@
-# MJM Systems Web v4.0.3
+# MJM Systems Web v4.0.4
 
-Corrección:
-- Se solucionó `Nombre: undefined` al enviar el formulario desde Safari iOS.
-- El formulario ahora obtiene cada valor directamente mediante `getElementById`.
-- Ya no depende de variables globales del navegador.
-- Se añadieron atributos `name` y `autocomplete`.
-- Se valida nombre y descripción antes de abrir WhatsApp.
-- El mensaje usa correctamente:
-  - Nombre
-  - Empresa
-  - Tipo de solución
-  - Descripción
+Corrección crítica:
+- Se reconstruyó `app.js` desde la versión estable v4.0.2.
+- Se corrigió el error de sintaxis que impedía cargar toda la página.
+- El formulario ya no usa variables globales de Safari.
+- El nombre, empresa, tipo y descripción se leen mediante `getElementById`.
+- Se validó la sintaxis completa del JavaScript antes de generar el ZIP.
 
-Datos configurados:
+Datos:
 - MJMsystems.c@gmail.com
 - +51 936 702 029
 

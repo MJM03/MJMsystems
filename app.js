@@ -1,4 +1,40 @@
-const header=document.querySelector('header'),menu=document.getElementById('menu'),links=document.getElementById('links');menu.onclick=()=>links.classList.toggle('open');links.querySelectorAll('a').forEach(a=>a.onclick=()=>links.classList.remove('open'));addEventListener('scroll',()=>header.classList.toggle('scrolled',scrollY>30));const ob=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');ob.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(e=>ob.observe(e));const cases={inventory:['Inventario y almacén','Control centralizado de productos y movimientos.','Productos y ubicaciones','Entradas, salidas y conteos','Alertas y diferencias','Reportes y trazabilidad'],sales:['Ventas y clientes','Seguimiento comercial desde el contacto hasta el cierre.','Clientes y oportunidades','Cotizaciones y propuestas','Seguimiento comercial','Indicadores de ventas'],ops:['Operaciones','Procesos visibles, responsables y estados claros.','Flujo del proceso','Responsables y estados','Alertas y aprobaciones','Panel de operación'],clients:['Atención y reservas','Una experiencia organizada para clientes y equipo.','Registro de solicitudes','Agenda o reservas','Notificaciones','Historial del cliente'],reports:['Datos y reportes','Información centralizada para tomar decisiones.','Fuentes de datos','Indicadores clave','Reportes automáticos','Exportación y alertas']};function render(k){const c=cases[k];caseContent.innerHTML=`<div><span class="eyebrow">${c[0]}</span><h3>${c[1]}</h3><p>Diseñamos una solución adaptada al proceso, usuarios y nivel de operación.</p><div class="caseSteps">${c.slice(2).map((x,i)=>`<div><span>${i+1}</span><b>${x}</b></div>`).join('')}</div></div><div class="preview"><i></i><div><b></b><b></b><b></b><b></b></div></div>`}render('inventory');caseBtns.querySelectorAll('button').forEach(b=>b.onclick=()=>{caseBtns.querySelectorAll('button').forEach(x=>x.classList.remove('active'));b.classList.add('active');render(b.dataset.key)});year.textContent=new Date().getFullYear();`,`Empresa: ${company.value||'No indicado'}`,`Tipo: ${service.value}`,`Descripción: ${message.value}`].join('\n');open(`https://wa.me/51936702029?text=${encodeURIComponent(t)}`,'_blank')}
+const header=document.querySelector('header'),menu=document.getElementById('menu'),links=document.getElementById('links');menu.onclick=()=>links.classList.toggle('open');links.querySelectorAll('a').forEach(a=>a.onclick=()=>links.classList.remove('open'));addEventListener('scroll',()=>header.classList.toggle('scrolled',scrollY>30));const ob=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');ob.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(e=>ob.observe(e));const cases={inventory:['Inventario y almacén','Control centralizado de productos y movimientos.','Productos y ubicaciones','Entradas, salidas y conteos','Alertas y diferencias','Reportes y trazabilidad'],sales:['Ventas y clientes','Seguimiento comercial desde el contacto hasta el cierre.','Clientes y oportunidades','Cotizaciones y propuestas','Seguimiento comercial','Indicadores de ventas'],ops:['Operaciones','Procesos visibles, responsables y estados claros.','Flujo del proceso','Responsables y estados','Alertas y aprobaciones','Panel de operación'],clients:['Atención y reservas','Una experiencia organizada para clientes y equipo.','Registro de solicitudes','Agenda o reservas','Notificaciones','Historial del cliente'],reports:['Datos y reportes','Información centralizada para tomar decisiones.','Fuentes de datos','Indicadores clave','Reportes automáticos','Exportación y alertas']};function render(k){const c=cases[k];caseContent.innerHTML=`<div><span class="eyebrow">${c[0]}</span><h3>${c[1]}</h3><p>Diseñamos una solución adaptada al proceso, usuarios y nivel de operación.</p><div class="caseSteps">${c.slice(2).map((x,i)=>`<div><span>${i+1}</span><b>${x}</b></div>`).join('')}</div></div><div class="preview"><i></i><div><b></b><b></b><b></b><b></b></div></div>`}render('inventory');caseBtns.querySelectorAll('button').forEach(b=>b.onclick=()=>{caseBtns.querySelectorAll('button').forEach(x=>x.classList.remove('active'));b.classList.add('active');render(b.dataset.key)});year.textContent=new Date().getFullYear();const contactForm=document.getElementById('form');
+if(contactForm){
+  contactForm.addEventListener('submit',(event)=>{
+    event.preventDefault();
+
+    const nameInput=document.getElementById('name');
+    const companyInput=document.getElementById('company');
+    const serviceInput=document.getElementById('service');
+    const messageInput=document.getElementById('message');
+
+    const contactName=nameInput ? nameInput.value.trim() : '';
+    const companyName=companyInput ? companyInput.value.trim() : '';
+    const serviceName=serviceInput ? serviceInput.value.trim() : '';
+    const description=messageInput ? messageInput.value.trim() : '';
+
+    if(!contactName){
+      if(nameInput) nameInput.focus();
+      return;
+    }
+
+    if(!description){
+      if(messageInput) messageInput.focus();
+      return;
+    }
+
+    const whatsappMessage=[
+      'Hola MJM Systems, quisiera conversar sobre un proyecto.',
+      '',
+      `Nombre: ${contactName}`,
+      `Empresa: ${companyName || 'No indicada'}`,
+      `Tipo: ${serviceName || 'No indicado'}`,
+      `Descripción: ${description}`
+    ].join('\n');
+
+    window.location.href=`https://wa.me/51936702029?text=${encodeURIComponent(whatsappMessage)}`;
+  });
+}
 
 // MJM Systems v4.0.0 — microinteractions for product demos.
 (() => {
@@ -54,48 +90,4 @@ const header=document.querySelector('header'),menu=document.getElementById('menu
   }, { threshold: 0.3 });
 
   document.querySelectorAll('.demo-card').forEach((card) => demoObserver.observe(card));
-})();
-
-// MJM Systems v4.0.3 — envío de contacto compatible con Safari iOS.
-(() => {
-  const contactForm = document.getElementById('form');
-  if (!contactForm) return;
-
-  contactForm.addEventListener('submit', (event) => {
-    event.preventDefault();
-
-    const nameInput = document.getElementById('name');
-    const companyInput = document.getElementById('company');
-    const serviceInput = document.getElementById('service');
-    const messageInput = document.getElementById('message');
-
-    const contactName = nameInput ? nameInput.value.trim() : '';
-    const company = companyInput ? companyInput.value.trim() : '';
-    const service = serviceInput ? serviceInput.value.trim() : '';
-    const description = messageInput ? messageInput.value.trim() : '';
-
-    if (!contactName) {
-      nameInput?.focus();
-      return;
-    }
-
-    if (!description) {
-      messageInput?.focus();
-      return;
-    }
-
-    const whatsappMessage = [
-      'Hola MJM Systems, quisiera conversar sobre un proyecto.',
-      '',
-      `Nombre: ${contactName}`,
-      `Empresa: ${company || 'No indicada'}`,
-      `Tipo: ${service || 'No indicado'}`,
-      `Descripción: ${description}`
-    ].join('\n');
-
-    const whatsappUrl =
-      `https://wa.me/51936702029?text=${encodeURIComponent(whatsappMessage)}`;
-
-    window.location.href = whatsappUrl;
-  });
 })();
