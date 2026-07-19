@@ -1,13 +1,19 @@
-# MJM Systems Web v3.1.1
+# MJM Systems Web v4.0.0
 
-Corrección para iPhone:
-- Se oculta el preview decorativo de los casos de uso en pantallas móviles.
-- Se elimina el espacio vacío inferior.
-- Se reduce la altura de la tarjeta.
-- Se ajustan título, pasos y espaciados para Safari iOS.
-- El preview sigue visible en tablet y escritorio.
+Actualización principal:
+- Se reconstruyó completamente la sección “Qué podemos construir”.
+- Cada servicio contiene una mini interfaz de software real.
+- ERP con KPI y gráfico animado.
+- App móvil con escáner de inventario.
+- POS de escritorio con productos y ticket.
+- Automatización con flujo conectado.
+- Dashboard con indicadores y gráfico animado.
+- Asistente IA con respuesta escrita progresivamente.
+- Optimización mobile-first para iPhone y Safari.
+- No depende de imágenes externas para estas demostraciones.
 
-Correo: MJMsystems.c@gmail.com
-WhatsApp: +51 936 702 029
+Datos configurados:
+- Correo: MJMsystems.c@gmail.com
+- WhatsApp: +51 936 702 029
 
 Reemplaza todos los archivos anteriores en la raíz del repositorio.
