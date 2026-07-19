@@ -1,14 +1,18 @@
-# MJM Systems Web v4.0.2
+# MJM Systems Web v4.0.3
 
-Cambios:
-- Se eliminó completamente la tarjeta “IA dentro de procesos reales”.
-- Se reconstruyó la mini interfaz de Dashboard y analítica.
-- El gráfico ahora tiene una altura estable y no se corta en Safari iOS.
-- Los KPI quedan contenidos dentro del panel.
-- Se agregó cuadrícula, leyenda y periodo del reporte.
-- Se optimizó la tarjeta para iPhone y pantallas pequeñas.
+Corrección:
+- Se solucionó `Nombre: undefined` al enviar el formulario desde Safari iOS.
+- El formulario ahora obtiene cada valor directamente mediante `getElementById`.
+- Ya no depende de variables globales del navegador.
+- Se añadieron atributos `name` y `autocomplete`.
+- Se valida nombre y descripción antes de abrir WhatsApp.
+- El mensaje usa correctamente:
+  - Nombre
+  - Empresa
+  - Tipo de solución
+  - Descripción
 
-Datos:
+Datos configurados:
 - MJMsystems.c@gmail.com
 - +51 936 702 029
 
