@@ -1,6 +1,11 @@
-# MJM Systems Web v2.0.0
+# MJM Systems Web v3.0.0
 
-Correo: MJMsystems.c@gmail.com
-WhatsApp: +51 936 702 029
+Versión corregida para iPhone y Safari.
 
-Sube todos los archivos directamente a la raíz de GitHub Pages. Elimina Service Workers antiguos si existen.
+Cambios principales:
+- Se eliminó la colisión CSS entre la sección de diagnóstico y la tarjeta QuoteOS.
+- Las etiquetas dejaron de usar la etiqueta footer, evitando fondos y espacios gigantes.
+- Portafolio, tarjetas, mockups y diagnóstico recalibrados para móvil.
+- Contacto: MJMsystems.c@gmail.com / +51 936 702 029.
+
+Sube todos los archivos a la raíz de GitHub Pages y reemplaza los anteriores.
